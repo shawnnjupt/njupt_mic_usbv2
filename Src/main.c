@@ -32,6 +32,7 @@
 
 #include "shell_port.h"
 #include "u8g2.h"
+#include "usbd_audio_if.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -66,6 +67,14 @@ uint8_t u8x8_byte_4wire_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int,
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+#define OSA_BUF_SIZE 16      /* ADC oversampling buffer. Make sure to state the correct  
+                                shift and offset amount in HAL_ADC_ConvCpltCallback() and
+                                adjust the sampling frequency accordingly */
+extern USBD_HandleTypeDef hUsbDeviceFS;
+int16_t adc_buffer[OSA_BUF_SIZE * AUDIO_IN_PACKET / 2] = {0};
+
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -80,8 +89,11 @@ uint8_t u8x8_byte_4wire_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int,
 Shell shell;
 uint8_t recv_buf = 0;
 u8g2_t u8g2;
-uint16_t temp_ADC_Value;
+uint16_t temp_ADC_Value[128];
 float adc_value ;
+
+int count_adc_back;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,6 +104,79 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
+	USBD_AUDIO_HandleTypeDef *haudio = hUsbDeviceFS.pClassData;
+	int16_t *buf_part = haudio->in_buffer + (AUDIO_IN_PACKET / 2) * haudio->in_buffer_half;  // USB mic buffer access
+
+	
+	/* Oversample for +2 bits */
+	for (uint16_t i = 0; i < (AUDIO_IN_PACKET / 2); i++) {
+  	int32_t avg_value = 0;
+		for (uint16_t j = 0; j < OSA_BUF_SIZE; j++) {
+			avg_value += adc_buffer[OSA_BUF_SIZE * i + j];
+		}
+    // bit shift for signed variables is undefined behaviour
+		// Don't forget the mic amp offset: 0-1706, 1-3413, 2-6826
+		buf_part[i] = (avg_value / 4) - 6826;
+		
+		
+		if(count_adc_back==0){
+		temp_ADC_Value[i]=(buf_part[i]+6826);
+		}
+		else if(count_adc_back==1)
+		{
+		temp_ADC_Value[i+22]=(buf_part[i]+6826);
+			
+		}
+			else if(count_adc_back==2)
+			{
+							temp_ADC_Value[i+44]=(buf_part[i]+6826);
+	
+			}
+					else if(count_adc_back==3)
+			{
+							temp_ADC_Value[i+66]=(buf_part[i]+6826);
+	
+			}
+					else if(count_adc_back==4)
+			{
+							temp_ADC_Value[i+88]=(buf_part[i]+6826);
+	
+			}
+								else if(count_adc_back==5)
+			{
+							temp_ADC_Value[i+110]=(buf_part[i]+6826);
+	
+			}
+											else if(count_adc_back==6)
+			{
+				if(i+110<128)
+							temp_ADC_Value[i+110]=(buf_part[i]+6826);
+	
+			}
+	}
+	
+	
+	count_adc_back=count_adc_back+1;
+		if(count_adc_back==7)
+		{
+	count_adc_back=0;
+		}
+	
+
+	
+
+		
+}
+
+void ADC_to_MIC(void)
+{
+	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_buffer, OSA_BUF_SIZE * (AUDIO_IN_PACKET / 2)); // Start ADC transfer into oversampling buffer
+}
+
+
+
 int u8g2_printf(u8g2_t *u8g2, u8g2_uint_t x, u8g2_uint_t y, const char *fmt,
 ...)
 {
@@ -117,34 +202,48 @@ SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), he
 
 uint8_t map(uint16_t _value)
 {
-    return 63 - ((_value * 3) >> 8);
+    return 63 - ((_value * 3) >> 10);
 }
  
 void timer()
 {
 	   static uint8_t phase = 0;
     static uint16_t waveform[128];
-	waveform[phase++] = temp_ADC_Value;
+
 	
- adc_value=temp_ADC_Value/4096.0f * 3.3f;
 	
-    if (phase == 128)
+	phase++;
+
+	
+    if (phase == 5)
     {
+   adc_value=temp_ADC_Value[0]/16384.0f * 3.3f;
+			      for (uint8_t i = 0; i < 128; ++i)
+			{
+				 	waveform[i]=(temp_ADC_Value[i]);
+			}
 			
+	
         phase = 0;
 			u8g2_FirstPage(&u8g2);
 		do
 		{
-			u8g2_SetFont(&u8g2, u8g2_font_courR08_tf);
-			u8g2_printf(&u8g2, 0, 8, "10KAD 100FPS V=%.2fV",adc_value);
+	
+			u8g2_printf(&u8g2, 0, 8, "48KAD 100FPS V=%.2fV",adc_value);
 			
 			
         for (uint8_t i = 1; i != 128; ++i)
+			{
+					
+			
             u8g2_DrawLine(&u8g2, i - 1, map(waveform[i - 1]),i, map(waveform[i]));
+			}
+			
 			
 			} while (u8g2_NextPage(&u8g2));
 
     }
+    
 }
 
 
@@ -188,8 +287,9 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim2);
-	HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1); //启定时器PWM模式
-	HAL_ADC_Start_DMA(&hadc1,(uint32_t*)&temp_ADC_Value, 1);
+  HAL_TIM_Base_Start(&htim3);
+	//HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1); //启定时器PWM模式
+	//HAL_ADC_Start_DMA(&hadc1,(uint32_t*)&temp_ADC_Value, 1);
 
 
 		//使能串口中断接收
@@ -200,7 +300,7 @@ int main(void)
 	u8g2_Setup_ssd1306_128x64_noname_1(&u8g2, U8G2_R0, u8x8_byte_4wire_hw_spi, u8x8_stm32_gpio_and_delay);
 	u8g2_InitDisplay(&u8g2);
 	u8g2_SetPowerSave(&u8g2, 0);
-	
+			u8g2_SetFont(&u8g2, u8g2_font_courR08_tf);
 	
   /* USER CODE END 2 */
 

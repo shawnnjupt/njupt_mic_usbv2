@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F401xC</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;             ../Drivers/STM32F4xx_HAL_Driver/Inc;             ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;             ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;             ../Drivers/CMSIS/Include;             ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;             ..\LIB\shell_inc;             ..\LIB\u8g2;../Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Inc</IncludePath>
+              <IncludePath>../Inc;              ../Drivers/STM32F4xx_HAL_Driver/Inc;              ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;              ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;              ../Drivers/CMSIS/Include;              ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;              ..\LIB\shell_inc;              ..\LIB\u8g2; ../Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

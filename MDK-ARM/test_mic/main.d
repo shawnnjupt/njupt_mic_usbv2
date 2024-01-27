@@ -48,4 +48,10 @@ test_mic/main.o: ..\Src\main.c ..\Inc\main.h \
   ..\LIB\shell_inc\shell.h ..\LIB\shell_inc\shell_ext.h \
   ..\LIB\u8g2\u8g2.h ..\LIB\u8g2\u8x8.h \
   D:\mdk\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  D:\mdk\ARM\ARMCLANG\Bin\..\include\limits.h
+  D:\mdk\ARM\ARMCLANG\Bin\..\include\limits.h ..\Inc\usbd_audio_if.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Class\AUDIO\Inc\usbd_audio.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h
