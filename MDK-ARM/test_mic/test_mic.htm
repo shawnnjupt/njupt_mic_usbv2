@@ -3,7 +3,7 @@
 <title>Static Call Graph - [test_mic\test_mic.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image test_mic\test_mic.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Sun Jan 28 02:09:31 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Sun Jan 28 12:17:35 2024
 <BR><P>
 <H3>Maximum Stack Usage =        464 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -159,7 +159,7 @@ Global Symbols
 <P><STRONG><a name="[44]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f401xc.o(.text)
 </UL>
-<P><STRONG><a name="[1e1]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[1e0]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[80]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -169,15 +169,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[1e2]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[1e1]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[1e3]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[1e2]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[1e4]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[1e3]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[1e5]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[1e4]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[1e6]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[1e5]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f401xc.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f401xc.o(RESET)
@@ -350,39 +350,31 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
-<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
-<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
-
-<P><STRONG><a name="[1e7]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
-
-<P><STRONG><a name="[19f]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer
-</UL>
-
-<P><STRONG><a name="[1e8]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
 <P><STRONG><a name="[86]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[1e9]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[1e6]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ea]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[1e7]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[85]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUDIO_REQ_GetCurrent
-<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_ClearBuffer
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_ClearBuffer
 </UL>
 
 <P><STRONG><a name="[139]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[1eb]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[1e8]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[87]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -407,14 +399,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
 </UL>
 
-<P><STRONG><a name="[1a1]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
+<P><STRONG><a name="[1a0]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer
 </UL>
 
-<P><STRONG><a name="[1ec]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[1e9]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e0]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[1df]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[84]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
@@ -424,7 +416,7 @@ Global Symbols
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[1ed]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[1ea]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[83]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
@@ -432,9 +424,9 @@ Global Symbols
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[1ee]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[1eb]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ef]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[1ec]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[88]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
@@ -444,7 +436,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[8c]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
@@ -458,24 +450,24 @@ Global Symbols
 <P><STRONG><a name="[8e]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[8f]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[90]"></a>__aeabi_d2ulz</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, dfixul.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[1dd]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<P><STRONG><a name="[1dc]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[81]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
@@ -484,13 +476,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[1f0]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[1ed]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[89]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[1f1]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<P><STRONG><a name="[1ee]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
 <P><STRONG><a name="[8b]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
@@ -551,8 +543,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
-<P><STRONG><a name="[92]"></a>HAL_ADC_ConvCpltCallback</STRONG> (Thumb, 212 bytes, Stack size 20 bytes, main.o(.text.HAL_ADC_ConvCpltCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_ADC_ConvCpltCallback
+<P><STRONG><a name="[92]"></a>HAL_ADC_ConvCpltCallback</STRONG> (Thumb, 120 bytes, Stack size 8 bytes, main.o(.text.HAL_ADC_ConvCpltCallback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_ADC_ConvCpltCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMAConvCplt
 </UL>
@@ -2036,7 +2028,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[1a3]"></a>map</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, main.o(.text.map))
+<P><STRONG><a name="[1a2]"></a>map</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, main.o(.text.map))
 <BR><BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer
 </UL>
 
@@ -2435,130 +2427,131 @@ Global Symbols
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClear
 </UL>
 
-<P><STRONG><a name="[114]"></a>timer</STRONG> (Thumb, 208 bytes, Stack size 48 bytes, main.o(.text.timer))
+<P><STRONG><a name="[114]"></a>timer</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, main.o(.text.timer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440<LI>Call Chain = timer &rArr; u8g2_printf &rArr; u8g2_DrawStr &rArr; u8g2_draw_string &rArr; u8g2_DrawGlyph &rArr; u8g2_font_draw_glyph &rArr; u8g2_font_decode_glyph &rArr; u8g2_font_decode_len &rArr; u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_printf
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_NextPage
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_FirstPage
-<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawLine
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;map
-<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_printf
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetFont
+<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_NextPage
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_FirstPage
+<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawLine
+<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;map
+<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
 
-<P><STRONG><a name="[1a6]"></a>u8g2_ClearBuffer</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, u8g2_buffer.o(.text.u8g2_ClearBuffer))
+<P><STRONG><a name="[1a5]"></a>u8g2_ClearBuffer</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, u8g2_buffer.o(.text.u8g2_ClearBuffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8g2_ClearBuffer
 </UL>
 <BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_NextPage
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_FirstPage
+<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_NextPage
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_FirstPage
 </UL>
 
-<P><STRONG><a name="[1a7]"></a>u8g2_DrawGlyph</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, u8g2_font.o(.text.u8g2_DrawGlyph))
+<P><STRONG><a name="[1a6]"></a>u8g2_DrawGlyph</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, u8g2_font.o(.text.u8g2_DrawGlyph))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = u8g2_DrawGlyph &rArr; u8g2_font_draw_glyph &rArr; u8g2_font_decode_glyph &rArr; u8g2_font_decode_len &rArr; u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_draw_glyph
+<BR>[Calls]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_draw_glyph
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_draw_string
+<BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_draw_string
 </UL>
 
-<P><STRONG><a name="[1a9]"></a>u8g2_DrawHVLine</STRONG> (Thumb, 176 bytes, Stack size 24 bytes, u8g2_hvline.o(.text.u8g2_DrawHVLine))
+<P><STRONG><a name="[1a8]"></a>u8g2_DrawHVLine</STRONG> (Thumb, 176 bytes, Stack size 24 bytes, u8g2_hvline.o(.text.u8g2_DrawHVLine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_clip_intersection2
+<BR>[Calls]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_clip_intersection2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawPixel
-<LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_len
+<BR>[Called By]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawPixel
+<LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_len
 </UL>
 
-<P><STRONG><a name="[1a4]"></a>u8g2_DrawLine</STRONG> (Thumb, 158 bytes, Stack size 48 bytes, u8g2_line.o(.text.u8g2_DrawLine))
+<P><STRONG><a name="[1a3]"></a>u8g2_DrawLine</STRONG> (Thumb, 158 bytes, Stack size 48 bytes, u8g2_line.o(.text.u8g2_DrawLine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = u8g2_DrawLine &rArr; u8g2_DrawPixel &rArr; u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawPixel
+<BR>[Calls]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawPixel
 </UL>
 <BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer
 </UL>
 
-<P><STRONG><a name="[1ab]"></a>u8g2_DrawPixel</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, u8g2_hvline.o(.text.u8g2_DrawPixel))
+<P><STRONG><a name="[1aa]"></a>u8g2_DrawPixel</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, u8g2_hvline.o(.text.u8g2_DrawPixel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = u8g2_DrawPixel &rArr; u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawHVLine
+<BR>[Calls]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawHVLine
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawLine
+<BR>[Called By]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawLine
 </UL>
 
-<P><STRONG><a name="[1ac]"></a>u8g2_DrawStr</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_DrawStr))
+<P><STRONG><a name="[1ab]"></a>u8g2_DrawStr</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_DrawStr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = u8g2_DrawStr &rArr; u8g2_draw_string &rArr; u8g2_DrawGlyph &rArr; u8g2_font_draw_glyph &rArr; u8g2_font_decode_glyph &rArr; u8g2_font_decode_len &rArr; u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_draw_string
+<BR>[Calls]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_draw_string
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_printf
+<BR>[Called By]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_printf
 </UL>
 
-<P><STRONG><a name="[1a0]"></a>u8g2_FirstPage</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, u8g2_buffer.o(.text.u8g2_FirstPage))
+<P><STRONG><a name="[19f]"></a>u8g2_FirstPage</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, u8g2_buffer.o(.text.u8g2_FirstPage))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = u8g2_FirstPage &rArr; u8g2_SetBufferCurrTileRow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetBufferCurrTileRow
-<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_ClearBuffer
+<BR>[Calls]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetBufferCurrTileRow
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_ClearBuffer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer
 </UL>
 
-<P><STRONG><a name="[1af]"></a>u8g2_IsIntersection</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, u8g2_intersection.o(.text.u8g2_IsIntersection))
+<P><STRONG><a name="[1ae]"></a>u8g2_IsIntersection</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, u8g2_intersection.o(.text.u8g2_IsIntersection))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = u8g2_IsIntersection
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_is_intersection_decision_tree
+<BR>[Calls]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_is_intersection_decision_tree
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_apply_clip_window
-<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
+<BR>[Called By]<UL><LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_apply_clip_window
+<LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
 </UL>
 
-<P><STRONG><a name="[1a5]"></a>u8g2_NextPage</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, u8g2_buffer.o(.text.u8g2_NextPage))
+<P><STRONG><a name="[1a4]"></a>u8g2_NextPage</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, u8g2_buffer.o(.text.u8g2_NextPage))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = u8g2_NextPage &rArr; u8g2_send_buffer &rArr; u8g2_send_tile_row &rArr; u8x8_DrawTile
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_RefreshDisplay
-<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetBufferCurrTileRow
-<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_ClearBuffer
-<LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_send_buffer
+<BR>[Calls]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_RefreshDisplay
+<LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetBufferCurrTileRow
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_ClearBuffer
+<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_send_buffer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer
 </UL>
 
-<P><STRONG><a name="[1ae]"></a>u8g2_SetBufferCurrTileRow</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, u8g2_buffer.o(.text.u8g2_SetBufferCurrTileRow))
+<P><STRONG><a name="[1ad]"></a>u8g2_SetBufferCurrTileRow</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, u8g2_buffer.o(.text.u8g2_SetBufferCurrTileRow))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8g2_SetBufferCurrTileRow
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_NextPage
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_FirstPage
+<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_NextPage
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_FirstPage
 </UL>
 
 <P><STRONG><a name="[16d]"></a>u8g2_SetFont</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_SetFont))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = u8g2_SetFont &rArr; u8g2_read_font_info
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_read_font_info
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_UpdateRefHeight
+<BR>[Calls]<UL><LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_read_font_info
+<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_UpdateRefHeight
 </UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[1b7]"></a>u8g2_SetFontPosBaseline</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_SetFontPosBaseline))
-<BR><BR>[Called By]<UL><LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetupBuffer
+<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1b6]"></a>u8g2_SetMaxClipWindow</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, u8g2_setup.o(.text.u8g2_SetMaxClipWindow))
+<P><STRONG><a name="[1b6]"></a>u8g2_SetFontPosBaseline</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_SetFontPosBaseline))
+<BR><BR>[Called By]<UL><LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetupBuffer
+</UL>
+
+<P><STRONG><a name="[1b5]"></a>u8g2_SetMaxClipWindow</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, u8g2_setup.o(.text.u8g2_SetMaxClipWindow))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8g2_SetMaxClipWindow
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetupBuffer
+<BR>[Called By]<UL><LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetupBuffer
 </UL>
 
-<P><STRONG><a name="[1b5]"></a>u8g2_SetupBuffer</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, u8g2_setup.o(.text.u8g2_SetupBuffer))
+<P><STRONG><a name="[1b4]"></a>u8g2_SetupBuffer</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, u8g2_setup.o(.text.u8g2_SetupBuffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = u8g2_SetupBuffer &rArr; u8g2_SetMaxClipWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetMaxClipWindow
-<LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetFontPosBaseline
+<BR>[Calls]<UL><LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetMaxClipWindow
+<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetFontPosBaseline
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_Setup_ssd1306_128x64_noname_1
 </UL>
@@ -2566,28 +2559,28 @@ Global Symbols
 <P><STRONG><a name="[16a]"></a>u8g2_Setup_ssd1306_128x64_noname_1</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, u8g2_d_setup.o(.text.u8g2_Setup_ssd1306_128x64_noname_1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = u8g2_Setup_ssd1306_128x64_noname_1 &rArr; u8x8_Setup &rArr; u8x8_SetupMemory
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_m_16_8_1
-<LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetupBuffer
-<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_Setup
+<BR>[Calls]<UL><LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_m_16_8_1
+<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetupBuffer
+<LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_Setup
 </UL>
 <BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1b4]"></a>u8g2_UpdateRefHeight</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_UpdateRefHeight))
+<P><STRONG><a name="[1b3]"></a>u8g2_UpdateRefHeight</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_UpdateRefHeight))
 <BR><BR>[Called By]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetFont
 </UL>
 
-<P><STRONG><a name="[1c1]"></a>u8g2_add_vector_x</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_add_vector_x))
-<BR><BR>[Called By]<UL><LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_len
-<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
+<P><STRONG><a name="[1c0]"></a>u8g2_add_vector_x</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_add_vector_x))
+<BR><BR>[Called By]<UL><LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_len
+<LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
 </UL>
 
-<P><STRONG><a name="[1c2]"></a>u8g2_add_vector_y</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_add_vector_y))
-<BR><BR>[Called By]<UL><LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_len
-<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
+<P><STRONG><a name="[1c1]"></a>u8g2_add_vector_y</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_add_vector_y))
+<BR><BR>[Called By]<UL><LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_len
+<LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
 </UL>
 
-<P><STRONG><a name="[1bb]"></a>u8g2_draw_hv_line_2dir</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, u8g2_hvline.o(.text.u8g2_draw_hv_line_2dir))
+<P><STRONG><a name="[1ba]"></a>u8g2_draw_hv_line_2dir</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, u8g2_hvline.o(.text.u8g2_draw_hv_line_2dir))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = u8g2_draw_hv_line_2dir
 </UL>
 <BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_draw_l90_r0
@@ -2596,63 +2589,63 @@ Global Symbols
 <P><STRONG><a name="[55]"></a>u8g2_draw_l90_r0</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, u8g2_setup.o(.text.u8g2_draw_l90_r0))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = u8g2_draw_l90_r0 &rArr; u8g2_draw_hv_line_2dir
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_draw_hv_line_2dir
+<BR>[Calls]<UL><LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_draw_hv_line_2dir
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> u8g2_setup.o(.rodata.u8g2_cb_r0)
 </UL>
 <P><STRONG><a name="[4d]"></a>u8g2_font_calc_vref_font</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_font_calc_vref_font))
 <BR>[Address Reference Count : 1]<UL><LI> u8g2_font.o(.text.u8g2_SetFontPosBaseline)
 </UL>
-<P><STRONG><a name="[1bd]"></a>u8g2_font_decode_get_signed_bits</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_font_decode_get_signed_bits))
+<P><STRONG><a name="[1bc]"></a>u8g2_font_decode_get_signed_bits</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_font_decode_get_signed_bits))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = u8g2_font_decode_get_signed_bits &rArr; u8g2_font_decode_get_unsigned_bits
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_get_unsigned_bits
+<BR>[Calls]<UL><LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_get_unsigned_bits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
+<BR>[Called By]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
 </UL>
 
-<P><STRONG><a name="[1be]"></a>u8g2_font_decode_get_unsigned_bits</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_font_decode_get_unsigned_bits))
+<P><STRONG><a name="[1bd]"></a>u8g2_font_decode_get_unsigned_bits</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_font_decode_get_unsigned_bits))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8g2_font_decode_get_unsigned_bits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
-<LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_get_signed_bits
-<LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_setup_decode
+<BR>[Called By]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_get_signed_bits
+<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_setup_decode
 </UL>
 
-<P><STRONG><a name="[1bf]"></a>u8g2_font_decode_glyph</STRONG> (Thumb, 300 bytes, Stack size 48 bytes, u8g2_font.o(.text.u8g2_font_decode_glyph))
+<P><STRONG><a name="[1be]"></a>u8g2_font_decode_glyph</STRONG> (Thumb, 300 bytes, Stack size 48 bytes, u8g2_font.o(.text.u8g2_font_decode_glyph))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = u8g2_font_decode_glyph &rArr; u8g2_font_decode_len &rArr; u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_IsIntersection
-<LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_len
-<LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_get_unsigned_bits
-<LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_get_signed_bits
-<LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_add_vector_y
-<LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_add_vector_x
-<LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_setup_decode
+<BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_IsIntersection
+<LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_len
+<LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_get_unsigned_bits
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_get_signed_bits
+<LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_add_vector_y
+<LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_add_vector_x
+<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_setup_decode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_draw_glyph
+<BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_draw_glyph
 </UL>
 
-<P><STRONG><a name="[1c3]"></a>u8g2_font_decode_len</STRONG> (Thumb, 184 bytes, Stack size 64 bytes, u8g2_font.o(.text.u8g2_font_decode_len))
+<P><STRONG><a name="[1c2]"></a>u8g2_font_decode_len</STRONG> (Thumb, 184 bytes, Stack size 64 bytes, u8g2_font.o(.text.u8g2_font_decode_len))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = u8g2_font_decode_len &rArr; u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawHVLine
-<LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_add_vector_y
-<LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_add_vector_x
+<BR>[Calls]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawHVLine
+<LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_add_vector_y
+<LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_add_vector_x
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
+<BR>[Called By]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
 </UL>
 
-<P><STRONG><a name="[1c4]"></a>u8g2_font_get_glyph_data</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, u8g2_font.o(.text.u8g2_font_get_glyph_data))
+<P><STRONG><a name="[1c3]"></a>u8g2_font_get_glyph_data</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, u8g2_font.o(.text.u8g2_font_get_glyph_data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = u8g2_font_get_glyph_data
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_get_word
+<BR>[Calls]<UL><LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_get_word
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_draw_glyph
+<BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_draw_glyph
 </UL>
 
-<P><STRONG><a name="[1b0]"></a>u8g2_is_intersection_decision_tree</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, u8g2_intersection.o(.text.u8g2_is_intersection_decision_tree))
-<BR><BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_IsIntersection
+<P><STRONG><a name="[1af]"></a>u8g2_is_intersection_decision_tree</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, u8g2_intersection.o(.text.u8g2_is_intersection_decision_tree))
+<BR><BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_IsIntersection
 </UL>
 
 <P><STRONG><a name="[50]"></a>u8g2_ll_hvline_vertical_top_lsb</STRONG> (Thumb, 160 bytes, Stack size 24 bytes, u8g2_ll_hvline.o(.text.u8g2_ll_hvline_vertical_top_lsb))
@@ -2660,24 +2653,24 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> u8g2_d_setup.o(.text.u8g2_Setup_ssd1306_128x64_noname_1)
 </UL>
-<P><STRONG><a name="[1b9]"></a>u8g2_m_16_8_1</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, u8g2_d_memory.o(.text.u8g2_m_16_8_1))
+<P><STRONG><a name="[1b8]"></a>u8g2_m_16_8_1</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, u8g2_d_memory.o(.text.u8g2_m_16_8_1))
 <BR><BR>[Called By]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_Setup_ssd1306_128x64_noname_1
 </UL>
 
-<P><STRONG><a name="[1a2]"></a>u8g2_printf</STRONG> (Thumb, 54 bytes, Stack size 160 bytes, main.o(.text.u8g2_printf))
+<P><STRONG><a name="[1a1]"></a>u8g2_printf</STRONG> (Thumb, 54 bytes, Stack size 160 bytes, main.o(.text.u8g2_printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 392<LI>Call Chain = u8g2_printf &rArr; u8g2_DrawStr &rArr; u8g2_draw_string &rArr; u8g2_DrawGlyph &rArr; u8g2_font_draw_glyph &rArr; u8g2_font_decode_glyph &rArr; u8g2_font_decode_len &rArr; u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawStr
-<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsnprintf
+<BR>[Calls]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawStr
+<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsnprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer
 </UL>
 
-<P><STRONG><a name="[1b3]"></a>u8g2_read_font_info</STRONG> (Thumb, 208 bytes, Stack size 16 bytes, u8g2_font.o(.text.u8g2_read_font_info))
+<P><STRONG><a name="[1b2]"></a>u8g2_read_font_info</STRONG> (Thumb, 208 bytes, Stack size 16 bytes, u8g2_font.o(.text.u8g2_read_font_info))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = u8g2_read_font_info
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_get_word
-<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_get_byte
+<BR>[Calls]<UL><LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_get_word
+<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_get_byte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_SetFont
 </UL>
@@ -2685,21 +2678,21 @@ Global Symbols
 <P><STRONG><a name="[53]"></a>u8g2_update_dimension_r0</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, u8g2_setup.o(.text.u8g2_update_dimension_r0))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = u8g2_update_dimension_r0 &rArr; u8g2_update_dimension_common
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_update_dimension_common
+<BR>[Calls]<UL><LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_update_dimension_common
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> u8g2_setup.o(.rodata.u8g2_cb_r0)
 </UL>
 <P><STRONG><a name="[54]"></a>u8g2_update_page_win_r0</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, u8g2_setup.o(.text.u8g2_update_page_win_r0))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = u8g2_update_page_win_r0 &rArr; u8g2_apply_clip_window &rArr; u8g2_IsIntersection
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_apply_clip_window
+<BR>[Calls]<UL><LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_apply_clip_window
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> u8g2_setup.o(.rodata.u8g2_cb_r0)
 </UL>
-<P><STRONG><a name="[1c9]"></a>u8x8_DrawTile</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, u8x8_display.o(.text.u8x8_DrawTile))
+<P><STRONG><a name="[1c8]"></a>u8x8_DrawTile</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, u8x8_display.o(.text.u8x8_DrawTile))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = u8x8_DrawTile
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_send_tile_row
+<BR>[Called By]<UL><LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_send_tile_row
 </UL>
 
 <P><STRONG><a name="[16b]"></a>u8x8_InitDisplay</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_display.o(.text.u8x8_InitDisplay))
@@ -2708,10 +2701,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1b2]"></a>u8x8_RefreshDisplay</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_display.o(.text.u8x8_RefreshDisplay))
+<P><STRONG><a name="[1b1]"></a>u8x8_RefreshDisplay</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_display.o(.text.u8x8_RefreshDisplay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8x8_RefreshDisplay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_NextPage
+<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_NextPage
 </UL>
 
 <P><STRONG><a name="[16c]"></a>u8x8_SetPowerSave</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_display.o(.text.u8x8_SetPowerSave))
@@ -2720,23 +2713,23 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1b8]"></a>u8x8_Setup</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, u8x8_setup.o(.text.u8x8_Setup))
+<P><STRONG><a name="[1b7]"></a>u8x8_Setup</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, u8x8_setup.o(.text.u8x8_Setup))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = u8x8_Setup &rArr; u8x8_SetupMemory
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_SetupDefaults
-<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_SetupMemory
+<BR>[Calls]<UL><LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_SetupDefaults
+<LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_SetupMemory
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_Setup_ssd1306_128x64_noname_1
 </UL>
 
-<P><STRONG><a name="[1cb]"></a>u8x8_SetupDefaults</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, u8x8_setup.o(.text.u8x8_SetupDefaults))
-<BR><BR>[Called By]<UL><LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_Setup
+<P><STRONG><a name="[1ca]"></a>u8x8_SetupDefaults</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, u8x8_setup.o(.text.u8x8_SetupDefaults))
+<BR><BR>[Called By]<UL><LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_Setup
 </UL>
 
-<P><STRONG><a name="[1cc]"></a>u8x8_SetupMemory</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_display.o(.text.u8x8_SetupMemory))
+<P><STRONG><a name="[1cb]"></a>u8x8_SetupMemory</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_display.o(.text.u8x8_SetupMemory))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8x8_SetupMemory
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_Setup
+<BR>[Called By]<UL><LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_Setup
 </UL>
 
 <P><STRONG><a name="[4c]"></a>u8x8_ascii_next</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, u8x8_8x8.o(.text.u8x8_ascii_next))
@@ -2750,21 +2743,21 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text.main)
 </UL>
-<P><STRONG><a name="[1cd]"></a>u8x8_byte_SendByte</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, u8x8_byte.o(.text.u8x8_byte_SendByte))
+<P><STRONG><a name="[1cc]"></a>u8x8_byte_SendByte</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, u8x8_byte.o(.text.u8x8_byte_SendByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = u8x8_byte_SendByte &rArr; u8x8_byte_SendBytes
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_byte_SendBytes
+<BR>[Calls]<UL><LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_byte_SendBytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_001
 </UL>
 
-<P><STRONG><a name="[1ce]"></a>u8x8_byte_SendBytes</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_byte.o(.text.u8x8_byte_SendBytes))
+<P><STRONG><a name="[1cd]"></a>u8x8_byte_SendBytes</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_byte.o(.text.u8x8_byte_SendBytes))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8x8_byte_SendBytes
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_byte_SendByte
+<BR>[Called By]<UL><LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_byte_SendByte
 </UL>
 
-<P><STRONG><a name="[1cf]"></a>u8x8_byte_SetDC</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_byte.o(.text.u8x8_byte_SetDC))
+<P><STRONG><a name="[1ce]"></a>u8x8_byte_SetDC</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_byte.o(.text.u8x8_byte_SetDC))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8x8_byte_SetDC
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_001
@@ -2773,82 +2766,82 @@ Global Symbols
 <P><STRONG><a name="[4f]"></a>u8x8_cad_001</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, u8x8_cad.o(.text.u8x8_cad_001))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = u8x8_cad_001 &rArr; u8x8_byte_SendByte &rArr; u8x8_byte_SendBytes
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_byte_SetDC
-<LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_byte_SendByte
+<BR>[Calls]<UL><LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_byte_SetDC
+<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_byte_SendByte
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> u8g2_d_setup.o(.text.u8g2_Setup_ssd1306_128x64_noname_1)
 </UL>
-<P><STRONG><a name="[1d9]"></a>u8x8_cad_EndTransfer</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_cad.o(.text.u8x8_cad_EndTransfer))
+<P><STRONG><a name="[1d8]"></a>u8x8_cad_EndTransfer</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_cad.o(.text.u8x8_cad_EndTransfer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8x8_cad_EndTransfer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
+<BR>[Called By]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
 </UL>
 
-<P><STRONG><a name="[1d8]"></a>u8x8_cad_SendArg</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_cad.o(.text.u8x8_cad_SendArg))
+<P><STRONG><a name="[1d7]"></a>u8x8_cad_SendArg</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_cad.o(.text.u8x8_cad_SendArg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8x8_cad_SendArg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
+<BR>[Called By]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
 </UL>
 
-<P><STRONG><a name="[1d7]"></a>u8x8_cad_SendCmd</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_cad.o(.text.u8x8_cad_SendCmd))
+<P><STRONG><a name="[1d6]"></a>u8x8_cad_SendCmd</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_cad.o(.text.u8x8_cad_SendCmd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8x8_cad_SendCmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
+<BR>[Called By]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
 </UL>
 
-<P><STRONG><a name="[1d2]"></a>u8x8_cad_SendData</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_cad.o(.text.u8x8_cad_SendData))
+<P><STRONG><a name="[1d1]"></a>u8x8_cad_SendData</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_cad.o(.text.u8x8_cad_SendData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8x8_cad_SendData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendSequence
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
+<BR>[Called By]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendSequence
+<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
 </UL>
 
-<P><STRONG><a name="[1d0]"></a>u8x8_cad_SendSequence</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, u8x8_cad.o(.text.u8x8_cad_SendSequence))
+<P><STRONG><a name="[1cf]"></a>u8x8_cad_SendSequence</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, u8x8_cad.o(.text.u8x8_cad_SendSequence))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = u8x8_cad_SendSequence &rArr; u8x8_cad_SendData
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendData
-<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_gpio_call
+<BR>[Calls]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendData
+<LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_gpio_call
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
+<BR>[Called By]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_128x64_noname
 </UL>
 
-<P><STRONG><a name="[1d6]"></a>u8x8_cad_StartTransfer</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_cad.o(.text.u8x8_cad_StartTransfer))
+<P><STRONG><a name="[1d5]"></a>u8x8_cad_StartTransfer</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, u8x8_cad.o(.text.u8x8_cad_StartTransfer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8x8_cad_StartTransfer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
+<BR>[Called By]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
 </UL>
 
-<P><STRONG><a name="[1d3]"></a>u8x8_d_helper_display_init</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, u8x8_display.o(.text.u8x8_d_helper_display_init))
+<P><STRONG><a name="[1d2]"></a>u8x8_d_helper_display_init</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, u8x8_display.o(.text.u8x8_d_helper_display_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = u8x8_d_helper_display_init &rArr; u8x8_gpio_call
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_gpio_call
+<BR>[Calls]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_gpio_call
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_128x64_noname
 </UL>
 
-<P><STRONG><a name="[1d5]"></a>u8x8_d_helper_display_setup_memory</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, u8x8_display.o(.text.u8x8_d_helper_display_setup_memory))
+<P><STRONG><a name="[1d4]"></a>u8x8_d_helper_display_setup_memory</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, u8x8_display.o(.text.u8x8_d_helper_display_setup_memory))
 <BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_128x64_noname
 </UL>
 
 <P><STRONG><a name="[4e]"></a>u8x8_d_ssd1306_128x64_noname</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, u8x8_d_ssd1306_128x64_noname.o(.text.u8x8_d_ssd1306_128x64_noname))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = u8x8_d_ssd1306_128x64_noname &rArr; u8x8_d_ssd1306_sh1106_generic &rArr; u8x8_cad_SendSequence &rArr; u8x8_cad_SendData
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_helper_display_setup_memory
-<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_helper_display_init
-<LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendSequence
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
+<BR>[Calls]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_helper_display_setup_memory
+<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_helper_display_init
+<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendSequence
+<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_sh1106_generic
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> u8g2_d_setup.o(.text.u8g2_Setup_ssd1306_128x64_noname_1)
 </UL>
 <P><STRONG><a name="[51]"></a>u8x8_dummy_cb</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, u8x8_setup.o(.text.u8x8_dummy_cb))
 <BR>[Address Reference Count : 1]<UL><LI> u8x8_setup.o(.text.u8x8_SetupDefaults)
 </UL>
-<P><STRONG><a name="[1d1]"></a>u8x8_gpio_call</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, u8x8_gpio.o(.text.u8x8_gpio_call))
+<P><STRONG><a name="[1d0]"></a>u8x8_gpio_call</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, u8x8_gpio.o(.text.u8x8_gpio_call))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = u8x8_gpio_call
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_helper_display_init
-<LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendSequence
+<BR>[Called By]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_helper_display_init
+<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendSequence
 </UL>
 
 <P><STRONG><a name="[4b]"></a>u8x8_stm32_gpio_and_delay</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, main.o(.text.u8x8_stm32_gpio_and_delay))
@@ -2859,31 +2852,31 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text.main)
 </UL>
-<P><STRONG><a name="[1bc]"></a>u8x8_utf8_init</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, u8x8_8x8.o(.text.u8x8_utf8_init))
-<BR><BR>[Called By]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_draw_string
+<P><STRONG><a name="[1bb]"></a>u8x8_utf8_init</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, u8x8_8x8.o(.text.u8x8_utf8_init))
+<BR><BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_draw_string
 </UL>
 
-<P><STRONG><a name="[1da]"></a>__0vsnprintf</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[1d9]"></a>__0vsnprintf</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[1f2]"></a>__1vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
+<P><STRONG><a name="[1ef]"></a>__1vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
 
-<P><STRONG><a name="[1f3]"></a>__2vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
+<P><STRONG><a name="[1f0]"></a>__2vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
 
-<P><STRONG><a name="[1f4]"></a>__c89vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
+<P><STRONG><a name="[1f1]"></a>__c89vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
 
-<P><STRONG><a name="[1c6]"></a>vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf))
+<P><STRONG><a name="[1c5]"></a>vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = vsnprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_printf
+<BR>[Called By]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_printf
 </UL>
 
-<P><STRONG><a name="[1f5]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[1f2]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[1f6]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[1f3]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[1f7]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[1f4]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[167]"></a>puts</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, puts.o(i.puts))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = puts &rArr; fputc &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
@@ -3007,7 +3000,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[45]"></a>ADC_DMAConvCplt</STRONG> (Thumb, 114 bytes, Stack size 8 bytes, stm32f4xx_hal_adc.o(.text.ADC_DMAConvCplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = ADC_DMAConvCplt &rArr; HAL_ADC_ConvCpltCallback
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = ADC_DMAConvCplt &rArr; HAL_ADC_ConvCpltCallback
 </UL>
 <BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvCpltCallback
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ErrorCallback
@@ -3449,117 +3442,117 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
 </UL>
 
-<P><STRONG><a name="[1b1]"></a>u8g2_send_buffer</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, u8g2_buffer.o(.text.u8g2_send_buffer))
+<P><STRONG><a name="[1b0]"></a>u8g2_send_buffer</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, u8g2_buffer.o(.text.u8g2_send_buffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = u8g2_send_buffer &rArr; u8g2_send_tile_row &rArr; u8x8_DrawTile
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_send_tile_row
+<BR>[Calls]<UL><LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_send_tile_row
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_NextPage
+<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_NextPage
 </UL>
 
-<P><STRONG><a name="[1c8]"></a>u8g2_send_tile_row</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, u8g2_buffer.o(.text.u8g2_send_tile_row))
+<P><STRONG><a name="[1c7]"></a>u8g2_send_tile_row</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, u8g2_buffer.o(.text.u8g2_send_tile_row))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = u8g2_send_tile_row &rArr; u8x8_DrawTile
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_DrawTile
+<BR>[Calls]<UL><LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_DrawTile
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_send_buffer
+<BR>[Called By]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_send_buffer
 </UL>
 
-<P><STRONG><a name="[1ad]"></a>u8g2_draw_string</STRONG> (Thumb, 134 bytes, Stack size 40 bytes, u8g2_font.o(.text.u8g2_draw_string))
+<P><STRONG><a name="[1ac]"></a>u8g2_draw_string</STRONG> (Thumb, 134 bytes, Stack size 40 bytes, u8g2_font.o(.text.u8g2_draw_string))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = u8g2_draw_string &rArr; u8g2_DrawGlyph &rArr; u8g2_font_draw_glyph &rArr; u8g2_font_decode_glyph &rArr; u8g2_font_decode_len &rArr; u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_utf8_init
-<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawGlyph
+<BR>[Calls]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_utf8_init
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawGlyph
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawStr
+<BR>[Called By]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawStr
 </UL>
 
-<P><STRONG><a name="[1a8]"></a>u8g2_font_draw_glyph</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_font_draw_glyph))
+<P><STRONG><a name="[1a7]"></a>u8g2_font_draw_glyph</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_font_draw_glyph))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = u8g2_font_draw_glyph &rArr; u8g2_font_decode_glyph &rArr; u8g2_font_decode_len &rArr; u8g2_DrawHVLine &rArr; u8g2_clip_intersection2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_get_glyph_data
-<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
+<BR>[Calls]<UL><LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_get_glyph_data
+<LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawGlyph
-</UL>
-
-<P><STRONG><a name="[1c7]"></a>u8g2_font_get_byte</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_font_get_byte))
-<BR><BR>[Called By]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_read_font_info
+<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawGlyph
 </UL>
 
-<P><STRONG><a name="[1c5]"></a>u8g2_font_get_word</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_font_get_word))
-<BR><BR>[Called By]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_read_font_info
-<LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_get_glyph_data
+<P><STRONG><a name="[1c6]"></a>u8g2_font_get_byte</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_font_get_byte))
+<BR><BR>[Called By]<UL><LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_read_font_info
 </UL>
 
-<P><STRONG><a name="[1c0]"></a>u8g2_font_setup_decode</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_font_setup_decode))
+<P><STRONG><a name="[1c4]"></a>u8g2_font_get_word</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, u8g2_font.o(.text.u8g2_font_get_word))
+<BR><BR>[Called By]<UL><LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_read_font_info
+<LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_get_glyph_data
+</UL>
+
+<P><STRONG><a name="[1bf]"></a>u8g2_font_setup_decode</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, u8g2_font.o(.text.u8g2_font_setup_decode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = u8g2_font_setup_decode &rArr; u8g2_font_decode_get_unsigned_bits
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_get_unsigned_bits
+<BR>[Calls]<UL><LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_get_unsigned_bits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
+<BR>[Called By]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_font_decode_glyph
 </UL>
 
-<P><STRONG><a name="[1aa]"></a>u8g2_clip_intersection2</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, u8g2_hvline.o(.text.u8g2_clip_intersection2))
+<P><STRONG><a name="[1a9]"></a>u8g2_clip_intersection2</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, u8g2_hvline.o(.text.u8g2_clip_intersection2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = u8g2_clip_intersection2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawHVLine
+<BR>[Called By]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_DrawHVLine
 </UL>
 
-<P><STRONG><a name="[1ba]"></a>u8g2_apply_clip_window</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, u8g2_setup.o(.text.u8g2_apply_clip_window))
+<P><STRONG><a name="[1b9]"></a>u8g2_apply_clip_window</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, u8g2_setup.o(.text.u8g2_apply_clip_window))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = u8g2_apply_clip_window &rArr; u8g2_IsIntersection
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_IsIntersection
+<BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_IsIntersection
 </UL>
 <BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_update_page_win_r0
 </UL>
 
-<P><STRONG><a name="[1ca]"></a>u8g2_update_dimension_common</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, u8g2_setup.o(.text.u8g2_update_dimension_common))
+<P><STRONG><a name="[1c9]"></a>u8g2_update_dimension_common</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, u8g2_setup.o(.text.u8g2_update_dimension_common))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = u8g2_update_dimension_common
 </UL>
 <BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8g2_update_dimension_r0
 </UL>
 
-<P><STRONG><a name="[1d4]"></a>u8x8_d_ssd1306_sh1106_generic</STRONG> (Thumb, 248 bytes, Stack size 24 bytes, u8x8_d_ssd1306_128x64_noname.o(.text.u8x8_d_ssd1306_sh1106_generic))
+<P><STRONG><a name="[1d3]"></a>u8x8_d_ssd1306_sh1106_generic</STRONG> (Thumb, 248 bytes, Stack size 24 bytes, u8x8_d_ssd1306_128x64_noname.o(.text.u8x8_d_ssd1306_sh1106_generic))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = u8x8_d_ssd1306_sh1106_generic &rArr; u8x8_cad_SendSequence &rArr; u8x8_cad_SendData
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_StartTransfer
-<LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendSequence
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendData
-<LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendCmd
-<LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendArg
-<LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_EndTransfer
+<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_StartTransfer
+<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendSequence
+<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendData
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendCmd
+<LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_SendArg
+<LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_cad_EndTransfer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u8x8_d_ssd1306_128x64_noname
 </UL>
 
-<P><STRONG><a name="[1dc]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 64 bytes, printfa.o(i._fp_digits), UNUSED)
+<P><STRONG><a name="[1db]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 64 bytes, printfa.o(i._fp_digits), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
-<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
+<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[1db]"></a>_printf_core</STRONG> (Thumb, 1744 bytes, Stack size 136 bytes, printfa.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
-<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
-<LI><a href="#[1df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
-<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<P><STRONG><a name="[1da]"></a>_printf_core</STRONG> (Thumb, 1744 bytes, Stack size 136 bytes, printfa.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0vsnprintf
+<BR>[Called By]<UL><LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0vsnprintf
 </UL>
 
-<P><STRONG><a name="[1df]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printfa.o(i._printf_post_padding), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[1de]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printfa.o(i._printf_post_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[1de]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printfa.o(i._printf_pre_padding), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[1dd]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printfa.o(i._printf_pre_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[52]"></a>_snputc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, printfa.o(i._snputc))

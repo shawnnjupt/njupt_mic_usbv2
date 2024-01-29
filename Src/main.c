@@ -89,10 +89,10 @@ int16_t adc_buffer[OSA_BUF_SIZE * AUDIO_IN_PACKET / 2] = {0};
 Shell shell;
 uint8_t recv_buf = 0;
 u8g2_t u8g2;
-uint16_t temp_ADC_Value[128];
+uint16_t temp_ADC_Value;
 float adc_value ;
 
-int count_adc_back;
+int oled_or_usb;
 
 /* USER CODE END PV */
 
@@ -106,6 +106,10 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
+	
+
+		
+		
 	USBD_AUDIO_HandleTypeDef *haudio = hUsbDeviceFS.pClassData;
 	int16_t *buf_part = haudio->in_buffer + (AUDIO_IN_PACKET / 2) * haudio->in_buffer_half;  // USB mic buffer access
 
@@ -119,52 +123,12 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
     // bit shift for signed variables is undefined behaviour
 		// Don't forget the mic amp offset: 0-1706, 1-3413, 2-6826
 		buf_part[i] = (avg_value / 4) - 6826;
-		
-		
-		if(count_adc_back==0){
-		temp_ADC_Value[i]=(buf_part[i]+6826);
-		}
-		else if(count_adc_back==1)
-		{
-		temp_ADC_Value[i+22]=(buf_part[i]+6826);
 			
-		}
-			else if(count_adc_back==2)
-			{
-							temp_ADC_Value[i+44]=(buf_part[i]+6826);
-	
-			}
-					else if(count_adc_back==3)
-			{
-							temp_ADC_Value[i+66]=(buf_part[i]+6826);
-	
-			}
-					else if(count_adc_back==4)
-			{
-							temp_ADC_Value[i+88]=(buf_part[i]+6826);
-	
-			}
-								else if(count_adc_back==5)
-			{
-							temp_ADC_Value[i+110]=(buf_part[i]+6826);
-	
-			}
-											else if(count_adc_back==6)
-			{
-				if(i+110<128)
-							temp_ADC_Value[i+110]=(buf_part[i]+6826);
-	
-			}
 	}
-	
-	
-	count_adc_back=count_adc_back+1;
-		if(count_adc_back==7)
-		{
-	count_adc_back=0;
-		}
-	
-
+		
+		
+	temp_ADC_Value=(buf_part[0]+6826);
+//oled_or_usb=0;
 	
 
 		
@@ -207,43 +171,34 @@ uint8_t map(uint16_t _value)
  
 void timer()
 {
+	
+	//oled_or_usb=1;
+		//HAL_ADC_Start_DMA(&hadc1,(uint32_t*)&temp_ADC_Value, 1);
+	
+	
 	   static uint8_t phase = 0;
     static uint16_t waveform[128];
-
+	waveform[phase++] = temp_ADC_Value;
 	
+ adc_value=temp_ADC_Value/16384.0f * 3.3f;
 	
-	phase++;
-
-	
-    if (phase == 5)
+    if (phase == 128)
     {
-   adc_value=temp_ADC_Value[0]/16384.0f * 3.3f;
-			      for (uint8_t i = 0; i < 128; ++i)
-			{
-				 	waveform[i]=(temp_ADC_Value[i]);
-			}
 			
-	
         phase = 0;
 			u8g2_FirstPage(&u8g2);
 		do
 		{
-	
-			u8g2_printf(&u8g2, 0, 8, "48KAD 100FPS V=%.2fV",adc_value);
+			u8g2_SetFont(&u8g2, u8g2_font_courR08_tf);
+			u8g2_printf(&u8g2, 0, 8, "10KAD 7.8FPS V=%.2fV",adc_value);
 			
 			
         for (uint8_t i = 1; i != 128; ++i)
-			{
-					
-			
             u8g2_DrawLine(&u8g2, i - 1, map(waveform[i - 1]),i, map(waveform[i]));
-			}
-			
 			
 			} while (u8g2_NextPage(&u8g2));
 
     }
-    
 }
 
 
