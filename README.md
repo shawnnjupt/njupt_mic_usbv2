@@ -61,3 +61,15 @@ cpu0:采样
 正常选择录音秒数之后可以开始录音，之后录音文件会出现在当前路径下，并且可以生成对应的波形图
 
 ![image-20240529234936107](READMEmarkdown-img/README.assets/image-20240529234936107.png)
+
+#### 5、Citation
+If you get inspired by our work, or otherwise find our work valuable, please cite our paper:
+
+```23
+@article{optocoupler,
+  title={Highly integrated optocoupler based on monolithic III-nitride diodes for on-chip data transfer},
+  author={Fan Shi,Chengxiang Jiang,Xiao Cong,Jiaqi Yin,Jiawei Shi,Jiabin Yan,Hongbo Zhu,Yongjin Wang},
+  journal={Optics & Laser Technology},
+  year={2025}
+}
+```
